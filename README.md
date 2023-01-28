@@ -1,2 +1,2 @@
 # simple-django-blog
-first_experience
+first_hand_experience
