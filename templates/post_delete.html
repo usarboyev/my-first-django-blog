@@ -4,7 +4,10 @@
     <h2>Postni o'chirish</h2>
     <form action="" method="post">
         {% csrf_token %}
-        <p>"{{ post.title }}" postini o'chirmoqchimisiz?</p>
+        {{ form.as_p }}
+        <p><b>"{{ post.title}}"</b> postini o'chirmoqchimisiz?</p>
         <input type="submit" value="O'chirish">
     </form>
+    <br>
+    <a href="{% url 'post_detail' post.pk %}">Orqaga</a>
 {% endblock content %}

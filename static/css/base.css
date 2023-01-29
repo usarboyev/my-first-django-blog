@@ -1,48 +1,26 @@
-header h1 a {
-    color: green;
-    text-decoration: none;
+* {
+    font-family: 'PT Serif', serif;
 }
 
+header p {
+    /* display: flex;
+    justify-content: space-between; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.logout {
+    color: red;
+}
+.login {
+    color: blue;
+    margin-right: 10px;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-.container {
-    position: relative;
-    top: -10px;
-    width: 1140px;
-    margin: 0 auto;
-}
-
-.main {
-    width: 1140px;
-    margin: 0 auto;
-    position: relative;
-    /* border: 1px solid rgb(184, 184, 184); */
-    background-color: aliceblue;
-    padding: 10px;
-    height: 80vh;
-    border-radius: 10px;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-
-.new_post {
+a{
     text-decoration: none;
-}
-
-.log {
-    display: inline-block;
-    display: flex;
-    align-items: center;
-}
-.log a {
-    margin-left: 10px;
-}
-
-.logout {
-    color: red;
 }

@@ -3,37 +3,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abbos Blog</title>
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
+    <header>
+        <h1>
+            <a href="{% url 'home' %}" style="color:blue">Abbos Blog</a><a> |</a>
+            <a href="{% url 'post_new' %}" style="color:green">Yangi post</a>
+        </h1>
+        {% if user.is_authenticated %}
+            <p>
+                <a> Xush kelibsiz, {{ user.username }}!</a>
+                <a href="{% url 'logout' %}" class="logout"> Chiqish</a>
+            </p>
+        {% else %}
+            <p>
+                <a href="{% url 'login' %}" class="login">Saytga kirish</a>
+                <a href="{% url 'signup' %}" class="login">Ro'yhatdan o'tish</a>
+            </p>
+        {% endif %}
+    </header>
+    <hr>
 
-    <div class="container">
-        <header>
-            <h1>
-                <a href="{% url 'home' %}">Abbos Blog</a>
-            </h1>
 
-            <div class="log">
-                {% if user.is_authenticated %}
-                    <p>Xush kelibsiz, {{ user.username }}!</p>
-                    <a href="{% url 'logout' %}" class="logout">Chiqib ketish</a>
-                {% else %}
-                    <a href="{% url 'login' %}" class="login">Saytga kirish</a>
-                {% endif %}
-            </div>
 
-        </header>
-
-        <div class="main">
-            {% block content %}
-            {% endblock content %}
-        </div>
-        <h2><a href="{% url 'post_new' %}" class="new_post">+ Yangi post</a></h2>
-    </div>
-
+    {% block content %}
+    {% endblock content %}
 
 </body>
 </html>
