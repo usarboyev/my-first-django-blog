@@ -6,7 +6,8 @@
             {{ post.title }}
             </a>
         </h2>
-        <p>{{ post.body | slice:":50" }}</p>
+        <p>{{ post.body | slice:":50" }}. . .</p>
+        <br>
     {% endfor %}
 
 {% endblock content %}

@@ -21,8 +21,8 @@
                 <a href="{% url 'logout' %}" class="logout"> Chiqish</a>
             </p>
         {% else %}
-            <p>
-                <a href="{% url 'login' %}" class="login">Saytga kirish</a>
+            <p class="login_bar">
+                <a href="{% url 'login' %}" class="login">Saytga kirish</a>|
                 <a href="{% url 'signup' %}" class="login">Ro'yhatdan o'tish</a>
             </p>
         {% endif %}
