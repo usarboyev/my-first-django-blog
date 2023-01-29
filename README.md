@@ -1,2 +1,2 @@
 # simple-django-blog
-first hand django blog project
+first hand blog project
