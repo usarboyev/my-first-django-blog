@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Yangi post</h2>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Saqlash">
-    </form>
+    {% if user.is_authenticated %}
+        <h2>Yangi post</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Saqlash">
+        </form>
+    {% else %}
+        <h2>Iltimos ro'yhatdan o'ting!</h2>
+        <a href="{% url 'home' %}">Orqaga</a>
+    {% endif %}
 {% endblock content %}
