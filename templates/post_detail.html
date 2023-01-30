@@ -3,8 +3,8 @@
 {% block content %}
     <div class="post-entry">
         <h2>{{ post.title }}</h2>
-        <h4>{{ post.author }}</h4>
         <p>{{ post.body }}</p>
+        <h4>Muallif: {{ post.author }}</h4>
     </div>
     <br>
     <a href="{% url 'post_edit' post.pk %}">Postni tahrirlash</a>
