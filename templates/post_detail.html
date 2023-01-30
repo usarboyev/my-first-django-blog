@@ -4,12 +4,12 @@
     <div class="post-entry">
         <h2>{{ post.title }}</h2>
         <p>{{ post.body }}</p>
-        <h4>Muallif: {{ post.author }}</h4>
+        <h4>Muallif: <i>{{ post.author }}</i></h4>
     </div>
     <br>
-    <a href="{% url 'post_edit' post.pk %}">Postni tahrirlash</a>
+    <a href="{% url 'post_edit' post.pk %}" style="color: green;">Postni tahrirlash</a>
     <br>
-    <a href="{% url 'post_delete' post.pk %}">Postni o'chirish</a>
+    <a href="{% url 'post_delete' post.pk %}" style="color: red;">Postni o'chirish</a>
     <br><br>
-    <a href="{% url 'home' %}">Orqaga</a>
+    <a href="{% url 'home' %}"><< Orqaga</a>
 {% endblock content %}
